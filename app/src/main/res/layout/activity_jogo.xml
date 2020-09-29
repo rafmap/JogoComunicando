@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Jogo">
+
+    <TextView
+        android:id="@+id/tvAdivinhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adivinhe os primeiros 3 números do CEP"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/edtCepInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCepFim"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdivinhe" />
+
+    <TextView
+        android:id="@+id/tvCepFim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="XXXXX"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edtCepInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdivinhe" />
+
+    <Button
+        android:id="@+id/btOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:width="250dp"
+        android:onClick="onClickOk"
+        android:text="OK"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCepInicio" />
+
+    <TextView
+        android:id="@+id/tvAvisoNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insira 3 algarismos"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btOk" />
+
+    <TextView
+        android:id="@+id/tvLogradouroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Logradouro:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btOk" />
+
+    <TextView
+        android:id="@+id/tvLogradouro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25dp"
+        android:text="Desconhecido"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvLogradouroText"
+        app:layout_constraintTop_toBottomOf="@+id/btOk" />
+
+    <TextView
+        android:id="@+id/tvCidadeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cidade:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvLogradouroText"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogradouroText" />
+
+    <TextView
+        android:id="@+id/tvCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Desconhecida"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvLogradouro"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogradouro" />
+
+    <TextView
+        android:id="@+id/tvStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Status:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCidadeText"
+        app:layout_constraintTop_toBottomOf="@+id/tvCidadeText" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Desconhecido"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCidade"
+        app:layout_constraintTop_toBottomOf="@+id/tvCidade" />
+
+    <TextView
+        android:id="@+id/tvPontuacaoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pontuação:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvStatusText"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatusText" />
+
+    <TextView
+        android:id="@+id/tvPontuacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="1000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    <TextView
+        android:id="@+id/tvTentativasText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tentativas:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPontuacaoText"
+        app:layout_constraintTop_toBottomOf="@+id/tvPontuacaoText" />
+
+    <TextView
+        android:id="@+id/tvTentativas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPontuacao"
+        app:layout_constraintTop_toBottomOf="@+id/tvPontuacao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
